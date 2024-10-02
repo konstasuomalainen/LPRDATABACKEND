@@ -22,7 +22,7 @@ This is the back end of the **Lappeenranta Purchasing Receipts Viewer** project,
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/lappeenranta-purchase-api.git
+   https://github.com/your-username/LPRDATABACKEND.git
    ```
 
 2. Create a virtual environment and install dependencies:
