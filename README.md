@@ -1,7 +1,3 @@
-Here's a GitHub Markdown description specifically for the back end portion of your project:
-
----
-
 # Lappeenranta Purchasing Receipts API (FastAPI Back End)
 
 This is the back end of the **Lappeenranta Purchasing Receipts Viewer** project, built with **FastAPI** and powered by an **SQLite3** database. The back end reads purchasing receipt data from Excel files (downloaded from Avoin Data), stores it in an SQLite3 database, and exposes a REST API to serve this data to the front-end client.
