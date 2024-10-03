@@ -1,13 +1,12 @@
+import os
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import sqlite3
 import logging
-import os
+import uvicorn
 
 app = FastAPI()
-
-# CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -53,6 +52,4 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))
     
     # Run the application
-    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=port)
-
