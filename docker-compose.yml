@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  fastapi:
+    build: .
+    image: lpr-data-backend:latest # Replace with your image name
+    container_name: fastapi_app # Name of the container
+    ports:
+      - "8000:8000" # Map host port 8000 to container port 8000
+    environment:
+      - PORT=8000 # Set the PORT environment variable
+
