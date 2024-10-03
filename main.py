@@ -3,8 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import sqlite3
 import logging
+import os
 
 app = FastAPI()
+
+# CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -44,3 +47,12 @@ def get_data_by_year(year: int, limit: int = Query(None), skip: int = Query(0)):
     if year < 2020 or year > 2023:
         raise HTTPException(status_code=400, detail="Year not supported")
     return get_data_for_year(year, limit, skip)
+
+if __name__ == "__main__":
+    # Get the port from the environment variable or default to 8000
+    port = int(os.getenv("PORT", 8000))
+    
+    # Run the application
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
